@@ -1,0 +1,18 @@
+body{
+    background-color: yellow;
+}
+
+.empty-slot{
+    background-color: lightgrey;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    margin: auto;
+
+}
+.row-selector{
+    width:66px;
+    height:30px;
+    background-color: lightgrey;
+    margin: auto;
+}
