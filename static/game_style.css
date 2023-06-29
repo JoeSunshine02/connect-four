@@ -10,9 +10,50 @@ body{
     margin: auto;
 
 }
+.p1-slot{
+    background-color: red;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    margin: auto;
+
+}
+.p2-slot{
+    background-color: black;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    margin: auto;
+
+}
 .row-selector{
     width:66px;
     height:30px;
     background-color: lightgrey;
     margin: auto;
+    font-family: monospace;
+}
+
+.left-layout{
+    float: left;
+    width: 50%;
+    
+}
+.right-layout{
+    float: right;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.player-container{
+    width: 75%;
+    height: 75px;
+    float:left;
+    background-color: lightgray;
+    border-radius: 5px;
+    box-shadow: 2px;
+}
+.player-text{
+    text-align: center;
+    font-family:monospace;
 }

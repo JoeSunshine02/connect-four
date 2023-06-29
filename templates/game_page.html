@@ -8,26 +8,45 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <table>
-        <tr>
-            <th><div class = "row-selector"></div></th>
-            <th><div class = "row-selector"></div></th>
-            <th><div class = "row-selector"></div></th>
-            <th><div class = "row-selector"></div></th>
-            <th><div class = "row-selector"></div></th>
-            <th><div class = "row-selector"></div></th>
-            <th><div class = "row-selector"></div></th>
-        </tr>
-        {% for x in board %}
-        <tr>
-            {% for y in x %}
-            {% if y ==0 %}
-            <td><div class = "empty-slot"></div></td>
-            {% endif %}
+    <div class = "left-layout">
+
+        <table>
+            <tr>
+                <form action ="/place_peice" method = "post">
+
+
+                    <th><button type="submit" class = "row-selector" id ="row" name ="row" value = 1>one</button></th>
+                    <th><button type="submit" class = "row-selector" id ="row" name ="row" value = 2>two</button></th>
+                    <th><button type="submit" class = "row-selector" id ="row" name ="row" value = 3>three</button></th>
+                    <th><button type="submit" class = "row-selector" id ="row" name ="row" value = 4>four</button></th>
+                    <th><button type="submit" class = "row-selector" id ="row" name ="row" value = 5>five</button></th>
+                    <th><button type="submit" class = "row-selector" id ="row" name ="row" value = 6>six</button></th>
+                    <th><button type="submit" class = "row-selector" id ="row" name ="row" value = 7>Seven</button></th>
+                </form>
+            </tr>
+            {% for x in board %}
+            <tr>
+                {% for y in x %}
+                {% if y ==1 %}
+                <td><div class = "p1-slot"></div></td>
+                {%elif y== -1 %}
+                <td><div class = "p2-slot"></div></td>
+                {%elif y==0 %}
+                <td><div class = "empty-slot"></div></td>
+                {% endif %}
+                {% endfor %}
+            </tr>
             {% endfor %}
-        </tr>
-        {% endfor %}
-    </table>   
+        </table>   
+    </div>
+    <div class = "right-layout">
+        <div class = "player-container">
+            {% if player == 1 %}
+            <h2 class = "player-text">Player 1's turn</h2>
+            {% elif player == -1 %}
+            <h2 class = "player-text">Player 2's turn</h2>
+            {% endif %}
+        </div>
+    </div>
 </body>
 </html>
