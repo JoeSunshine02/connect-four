@@ -1,5 +1,10 @@
 body{
-    background-color: yellow;
+    background-color: #009dff;
+    font-family: monospace
+}
+button { 
+    font-family: inherit;
+    font-weight: bold;
 }
 
 .empty-slot{
@@ -19,18 +24,34 @@ body{
 
 }
 .p2-slot{
-    background-color: black;
+    background-color: yellow;
     height: 65px;
     width: 65px;
     border-radius: 50%;
     margin: auto;
 
 }
-.row-selector{
+.row-selector-p1{
     width:66px;
     height:30px;
     background-color: lightgrey;
     margin: auto;
+    border-radius: 5px;
+}
+.row-selector-p1:hover{
+    background-color: red;
+}
+.row-selector-p2{
+    width:66px;
+    height:30px;
+    background-color: lightgrey;
+    margin: auto;
+    border-radius: 5px;
+}
+.row-selector-p2:hover{
+    background-color: yellow;
+}
+.row-selecter-text{
     font-family: monospace;
 }
 
@@ -42,8 +63,6 @@ body{
 .right-layout{
     float: right;
     width: 50%;
-    display: flex;
-    flex-direction: column;
 }
 .player-container{
     width: 75%;
@@ -52,8 +71,13 @@ body{
     background-color: lightgray;
     border-radius: 5px;
     box-shadow: 2px;
+    margin-top: 30px;
 }
 .player-text{
     text-align: center;
     font-family:monospace;
+}
+.table-wrapper{
+    margin: auto;
+    margin-top: 30px;
 }

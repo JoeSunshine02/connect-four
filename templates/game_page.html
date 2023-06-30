@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/static/game_style.css"/>
+    <link rel="stylesheet" href="/static/game_page_style.css"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +10,27 @@
 <body>
     <div class = "left-layout">
 
-        <table>
+        <table class = "table-wrapper">
             <tr>
                 <form action ="/place_peice" method = "post">
 
-
-                    <th><button type="submit" class = "row-selector" id ="row" name ="row" value = 1>one</button></th>
-                    <th><button type="submit" class = "row-selector" id ="row" name ="row" value = 2>two</button></th>
-                    <th><button type="submit" class = "row-selector" id ="row" name ="row" value = 3>three</button></th>
-                    <th><button type="submit" class = "row-selector" id ="row" name ="row" value = 4>four</button></th>
-                    <th><button type="submit" class = "row-selector" id ="row" name ="row" value = 5>five</button></th>
-                    <th><button type="submit" class = "row-selector" id ="row" name ="row" value = 6>six</button></th>
-                    <th><button type="submit" class = "row-selector" id ="row" name ="row" value = 7>Seven</button></th>
+                    {% if player ==1%}
+                    <th><button type="submit" class = "row-selector-p1" id ="row" name ="row" value = 1>one</button></th>
+                    <th><button type="submit" class = "row-selector-p1" id ="row" name ="row" value = 2>two</button></th>
+                    <th><button type="submit" class = "row-selector-p1" id ="row" name ="row" value = 3>three</button></th>
+                    <th><button type="submit" class = "row-selector-p1" id ="row" name ="row" value = 4>four</button></th>
+                    <th><button type="submit" class = "row-selector-p1" id ="row" name ="row" value = 5>five</button></th>
+                    <th><button type="submit" class = "row-selector-p1" id ="row" name ="row" value = 6>six</button></th>
+                    <th><button type="submit" class = "row-selector-p1" id ="row" name ="row" value = 7>Seven</button></th>
+                    {%elif player ==-1%}
+                    <th><button type="submit" class = "row-selector-p2" id ="row" name ="row" value = 1>one</button></th>
+                    <th><button type="submit" class = "row-selector-p2" id ="row" name ="row" value = 2>two</button></th>
+                    <th><button type="submit" class = "row-selector-p2" id ="row" name ="row" value = 3>three</button></th>
+                    <th><button type="submit" class = "row-selector-p2" id ="row" name ="row" value = 4>four</button></th>
+                    <th><button type="submit" class = "row-selector-p2" id ="row" name ="row" value = 5>five</button></th>
+                    <th><button type="submit" class = "row-selector-p2" id ="row" name ="row" value = 6>six</button></th>
+                    <th><button type="submit" class = "row-selector-p2" id ="row" name ="row" value = 7>Seven</button></th>
+                    {%endif%}
                 </form>
             </tr>
             {% for x in board %}

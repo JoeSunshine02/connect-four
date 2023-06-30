@@ -17,8 +17,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    return render_template('landing_page.html')
     
+
+@app.route('/game_board')
+def game_board():
     return render_template('game_page.html', board = board, player = player)
+
 
 @app.post('/place_peice')
 def place_peice():
@@ -38,4 +43,4 @@ def place_peice():
         player = -1
     else:
         player = 1
-    return redirect("/")
+    return redirect("/game_board")
